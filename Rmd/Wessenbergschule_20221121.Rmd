@@ -70,6 +70,169 @@ layout: true
 
 
 
+---
+name: isba
+class: left
+
+# BWL dual studieren an der ISBA Freiburg
+
+.panelset[
+.panel[.panel-name[www.isba-freiburg.de]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.isba-freiburg.de/',height='480px')
+```
+]
+.panel[.panel-name[Folien]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('../images/WiSA_slides_(github).svg',height='480px')
+```
+]
+]
+
+
+---
+name: Motivation
+class: left
+
+# Deutschland wird ärmer (?)
+
+<iframe width="1000" height="550" src="https://www.youtube.com/embed/oOtA82FfaMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+???
+
+* Erste 1:23min anschauen
+
+* Im Intro des Videos werden vier aktuelle Schlüsselfragen genannt:
+
+    * Woher bekommen wir die Energie?
+    * Wieviel ist unser Geld noch wert?
+    * Wo sind die Fachkräfte?
+    * Wie rüsten wir Deutschland für die Zukunft?
+
+
+---
+name: kaufkraftverlust-interaktiv
+class: left
+
+# Kaufkraftverlust bei unterschiedlichen Inflationsraten
+
+```{r,echo=FALSE,message=FALSE}
+source('../R/Kaufkraft.R')
+htmltools::save_html(p, file="kaufkraft.html") 
+```
+
+<iframe src="kaufkraft.html" width="1000" height="550" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe>
+
+.quelle[Eigene Darstellung.]
+
+
+---
+name: PersInfl
+class: left
+
+# Persönliche Inflationsrate
+
+.panelset[
+.panel[.panel-name[Mitmachen 1]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('../images/Destatis_PersInf.svg',height='450px')
+```  
+]
+.panel[.panel-name[Inflationsrechner]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://service.destatis.de/inflationsrechner/',height='480px')
+```
+]
+.panel[.panel-name[Mitmachen 2]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('../images/MSForms_PersInf.svg',height='450px')
+```
+[Ergebnis](https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=yjpmFUp3TEKzxTcoJcC6wuDE2VrZMshOjDDKYwhOH8pUQVI1NzNFWEZQQ0dMR1Q5VTlEUldXVVY2Uy4u&analysis=false)
+]
+]
+
+???
+
+* Durchschnittlicher Warenkorb vs. individuelle Gewichtung
+
+
+
+---
+name: Inflation
+class: left
+
+# Inflation und Geldwert
+
+
+.blockquote[
+Inflation
+
+Eine über einen längeren Zeitraum anhaltende Zunahme des Preisniveaus bzw. sinkende Kaufkraft. 
+]
+
+* Preisniveau
+      * Preis als objektiver Tauschwert eines Gutes in Marktwirtschaften.
+      * Preisniveau als durschnittlicher Preis aller (produzierten) Güter.
+
+* Inflation vs. Disinflation vs. [Deflation vs. Stagflation](#Deflation)
+
+
+.blockquote[
+Die **Kaufkraft**...
+
+...gibt an, welche Gütermenge mit einer gegebenen Geldsumme erworben
+werden kann (**Geldwert**).
+]
+
+* Obs! **Den** Geldwert gibt es nicht (`r fa("circle-right")` [individueller Verwendungszweck](#PersInf)).
+
+
+
+???
+
+* Disinflation: Abnehmende/rückläufige Inflationsraten. 
+* Deflation: Gegenteil von Inflation, also fallende Preise (negative Inflationsraten)
+
+
+
+
+---
+name: Preiskaleidoskop
+class: left
+
+# Verbraucherpreisindex
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://service.destatis.de/Voronoi/PreisKaleidoskop.svg',height='550px')
+```
+
+
+
+
+???
+* Deflator (Verwendungsseite, Seite 122): 112,06 (2021; 2015=100)
+* VPI (Dashboard): 111,1 (Dez 2021; 2015=100)
+
+* [Quelle: [Statistisches Bundesamt](https://www.destatis.de/DE/Themen/Wirtschaft/Preise/_inhalt.html).]
+    
+    
+* [Methodik](https://www.destatis.de/DE/Methoden/Qualitaet/Qualitaetsberichte/Preise/verbraucherpreis.pdf?__blob=publicationFile)
+
+* [Güterkategorien im Detail](https://www.destatis.de/DE/Themen/Wirtschaft/Preise/Verbraucherpreisindex/Methoden/Downloads/waegungsschema-2015.pdf?__blob=publicationFile)
+
+
+* BIP-Deflator vs. VPI
+  * [BIP-Deflator](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-vorlaeufig-pdf-2180140.pdf?__blob=publicationFile) - Preise der im Inland **produzierten** Güter
+      * 
+  * [VPI Dashboard](https://www.dashboard-deutschland.de/indicator/data_preisentwicklung?mtm_campaign=dd-social-sharing) - Preise der im Inlande **konsumierten** Güter
+  
+* Berechnung des BIP-Deflators: Division des zu einer Messzahl umgerechneten Ergebnis in jeweiligen Preisen (nominales BIP) dividiert durch die entsprechende preisbereinigte Größe (reales BIP).
+			* BIP-Deflator: nominales BIP-Wachstum abzüglich reales BIP-Wachstum (Näherungsformel!).
+			* BIP-Kettenindex: (= 100 im Jahr 2010)
+			      Vorjahreswert $\cdot$ (1 + reales BIP-Wachstum).
+			* BIP-Deflator: (= 100 im Jahr 2010) 
+	  		    Vorjahreswert $\cdot$ (1 + Inflationsrate (BIP-Deflator)).
 
 
 
@@ -125,6 +288,23 @@ knitr::include_url('https://www.wirtschaftsdienst.eu/files/journal-issues/wirtsc
 
 `r fa("circle-right")` 10,39%
 
+
+---
+name: Kerninflation
+class: left
+
+# Headline- vs. Kerninflation (HVPI)
+
+```{r,echo=FALSE,message=FALSE}
+source('../R/Kerninflation.R')
+htmltools::save_html(p, file="headline-core.html") 
+```
+
+<iframe src="headline-core.html" width="1000" height="550" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe>
+
+.quelle[Eigene Darstellung.]
+
+
 ---
 name: Deflation
 class: left
@@ -143,168 +323,11 @@ knitr::include_url('../images/comic_deflation_(Bauman_S55).png',height='550px')
 * Inflation im Boom vs. Stagflation
 
 
-
----
-name: Inflation
-class: left
-
-# Inflation und Geldwert
-
-
-.blockquote[
-Inflation
-
-Eine über einen längeren Zeitraum anhaltende Zunahme des Preisniveaus bzw. sinkende Kaufkraft. 
-]
-
-* Preisniveau
-      * Preis als objektiver Tauschwert eines Gutes in Marktwirtschaften.
-      * Preisniveau als durschnittlicher Preis aller (produzierten) Güter.
-
-* Inflation vs. Disinflation vs. [Deflation vs. Stagflation](#Deflation)
-
-
-.blockquote[
-Die **Kaufkraft**...
-
-...gibt an, welche Gütermenge mit einer gegebenen Geldsumme erworben
-werden kann (**Geldwert**).
-]
-
-* Obs! **Den** Geldwert gibt es nicht (`r fa("circle-right")` [individueller Verwendungszweck](#PersInf)).
-
-
-
-???
-
-* Disinflation: Abnehmende/rückläufige Inflationsraten. 
-* Deflation: Gegenteil von Inflation, also fallende Preise (negative Inflationsraten)
-
-
-
----
-name: kaufkraftverlust-interaktiv
-class: left
-
-# Kaufkraftverlust bei unterschiedlichen Inflationsraten
-
-```{r,echo=FALSE,message=FALSE}
-library(tidyverse)
-library(scales)
-library(plotly)
-rate <- c(.02,.04,.06,.08,.1)
-periode <- c(0:50)
-grid <- expand.grid(rate,periode) %>% 
-                          rename(Rate=Var1,Periode=Var2)
-df_plot <- grid %>% 
-              mutate(Kaufkraft=(1-Rate)^Periode,
-                Inflationsrate=factor(Rate,labels = c('2%','4%','6%','8%','10%'))
-                )
-
-
-#p <- df_plot %>% 
-#        ggplot(aes(x=Periode,y=Kaufkraft,color=Inflationsrate)) +
-#           geom_line(stat='identity',size=1.1) +
-#           scale_y_continuous(labels= scales::percent_format(accuracy #= 1)) +
-#           ylab("Kaufkraft (in % von Periode 1)") +
-#           guides(color=guide_legend("Inflationsrate (p.a.)")) +
-#           theme_light() +
-#           theme(legend.position = 'bottom')
-#p           
-p <- df_plot %>% 
-        plot_ly(x = ~Periode, y = ~Kaufkraft, color = ~Inflationsrate,
-            width=700, height=480) %>% 
-          add_lines()  %>% 
-          layout(xaxis=list(title="Periode"),  
-                 yaxis=list(tickformat = ".1%",
-                            title="Kaufkraft (in % Periode 1)")
-          ) 
-htmltools::save_html(p, file="kaufkraft.html") 
-
-
-```
-
-<iframe src="kaufkraft.html" width="1000" height="550" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe>
-
-.quelle[Eigene Darstellung.]
-
-
----
-name: PersInfl
-class: left
-
-# Persönliche Inflationsrate
-
-.panelset[
-.panel[.panel-name[Mitmachen 1]
-```{r, echo=FALSE,fig.align='center'}
-knitr::include_url('../images/Destatis_PersInf.svg',height='450px')
-```  
-]
-.panel[.panel-name[Inflationsrechner]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://service.destatis.de/inflationsrechner/',height='480px')
-```
-]
-.panel[.panel-name[Mitmachen 2]
-```{r, echo=FALSE,fig.align='center'}
-knitr::include_url('../images/MSForms_PersInf.svg',height='450px')
-```
-]
-]
-
-???
-
-* Durchschnittlicher Warenkorb vs. individuelle Gewichtung
-
-
-
-
----
-name: Preiskaleidoskop
-class: left
-
-# Verbraucherpreisindex
-
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('https://service.destatis.de/Voronoi/PreisKaleidoskop.svg',height='550px')
-```
-
-
-
-
-???
-* Deflator (Verwendungsseite, Seite 122): 112,06 (2021; 2015=100)
-* VPI (Dashboard): 111,1 (Dez 2021; 2015=100)
-
-* [Quelle: [Statistisches Bundesamt](https://www.destatis.de/DE/Themen/Wirtschaft/Preise/_inhalt.html).]
-    
-    
-* [Methodik](https://www.destatis.de/DE/Methoden/Qualitaet/Qualitaetsberichte/Preise/verbraucherpreis.pdf?__blob=publicationFile)
-
-* [Güterkategorien im Detail](https://www.destatis.de/DE/Themen/Wirtschaft/Preise/Verbraucherpreisindex/Methoden/Downloads/waegungsschema-2015.pdf?__blob=publicationFile)
-
-
-* BIP-Deflator vs. VPI
-  * [BIP-Deflator](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-vorlaeufig-pdf-2180140.pdf?__blob=publicationFile) - Preise der im Inland **produzierten** Güter
-      * 
-  * [VPI Dashboard](https://www.dashboard-deutschland.de/indicator/data_preisentwicklung?mtm_campaign=dd-social-sharing) - Preise der im Inlande **konsumierten** Güter
-  
-* Berechnung des BIP-Deflators: Division des zu einer Messzahl umgerechneten Ergebnis in jeweiligen Preisen (nominales BIP) dividiert durch die entsprechende preisbereinigte Größe (reales BIP).
-			* BIP-Deflator: nominales BIP-Wachstum abzüglich reales BIP-Wachstum (Näherungsformel!).
-			* BIP-Kettenindex: (= 100 im Jahr 2010)
-			      Vorjahreswert $\cdot$ (1 + reales BIP-Wachstum).
-			* BIP-Deflator: (= 100 im Jahr 2010) 
-	  		    Vorjahreswert $\cdot$ (1 + Inflationsrate (BIP-Deflator)).
-
-
-
-
 ---
 name: Preise
 class: left
 
-# Hyperinflation
+# Hyperinflation in Deutschland (Weimarer Republik)
 
 .panelset[
 .panel[.panel-name[Zeitreihe]
@@ -355,35 +378,14 @@ class: left
 .panel[.panel-name[International]
 <iframe src="https://ourworldindata.org/grapher/inflation-levels-and-volatility-in-high--and-low-income-economies-1960-2017" loading="lazy" style="width: 100%; height: 480px; border: 0px none;"></iframe>
 ]
-]
-
-
-
-
-
-
-
----
-name: Prod
-class: left
-
-
-# Produktivität und Inflation
-
-.panelset[
-.panel[.panel-name[Benzin]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('https://www.iwkoeln.de/fileadmin/user_upload/Presse/IW-Nachrichten/Inflation_1.png')
-```
-]
-.panel[.panel-name[Strom]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_graphics('https://www.iwkoeln.de/fileadmin/user_upload/Presse/IW-Nachrichten/Inflation_2.png')
-```
+.panel[.panel-name[Venezuela]
+<iframe width="1000px" height="480px" src="https://www.youtube.com/embed/F5e_NzF7hVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 ]
 
-.quelle[Quelle: [IW Köln](https://www.iwkoeln.de/presse/iw-nachrichten/michael-huether-christoph-schroeder-fuenf-minuten-arbeit-fuer-einen-liter-benzin.html).]
+
+
+
 
 
 
@@ -395,44 +397,177 @@ class: left
 # Ursachen und Erklärungen für Inflation
 
 .panelset[
-.panel[.panel-name[Übersicht]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/Ursachen_Inflation_small.png',height='480px')
-```
-.quellePanURL[Eigene Darstellung.]
-]
-.panel[.panel-name[Quantitätstheorie]
-```{r, echo=FALSE,fig.align='center',out.width='100%'}
-knitr::include_url('../images/QTheory.png',height='480px')
+.panel[.panel-name[Einfache Erklärung]
+```{r, echo=FALSE,fig.align='center',out.height='470px'}
+knitr::include_graphics('../images/QTheory.png')
 ```
 .quellePanURL[Quelle: [Bauman (2011, S. 48)](https://www.amazon.de/dp/0809033615/ref=cm_sw_em_r_mt_dp_5WNEX8X23YD4AVNFM9Y9).]
 ]
+.panel[.panel-name[Komplexität]
+```{r, echo=FALSE,fig.align='center',out.height='480px'}
+knitr::include_graphics('../images/Ursachen_Inflation_small.png')
+```
+.quellePanURL[Eigene Darstellung.]
+]
+]
+
+
+---
+name: Analyse
+class: left
+
+# Eine (unvollständige) Analyse
+
+.panelset[
+.panel[.panel-name[USA]
+```{r, echo=FALSE,fig.align='center',out.height='470px'}
+knitr::include_graphics('../images/Corona_Cash_USA_(Economist_20210309).png')
+```
+]
+.panel[.panel-name[Lieferketten]
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_graphics('../images/Lieferketten_(NYFed).png')
+```
+.quellePanURL[Quelle: [New York Fed]('https://www.newyorkfed.org/research/policy/gscpi#/interactive').]
+]
+.panel[.panel-name[Energiekosten]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.dashboard-deutschland.de/',height='480px')
+```
+]
+.panel[.panel-name[Klimapolitik]
+```{r, echo=FALSE,fig.align='center',out.height='470px'}
+knitr::include_graphics('../images/Inflationswirkung_CO2-Preis_(SVR_2020_S10).png')
+```
+]
+]
+
+???
+
+* Erzeugerpreise D:
+   * September 2022: 172,5
+   * September 2021: 118,3
+   * Steigerung: 45,8%
+
+
+---
+name: Ausblick
+class: left
+
+# Und wie geht es weiter?
+
+.panelset[
+.panel[.panel-name[Produzentenpreise USA]
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=WCFV&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:950px; height:480px;" allowTransparency="true" loading="lazy"></iframe>
+]
+.panel[.panel-name[Produzentenpreise D]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.dashboard-deutschland.de/',height='480px')
+```
+]
+]
+
+
+---
+name: Lohn
+class: left
+
+# Welche Faktoren werden wichtig?
+
+.panelset[
+.panel[.panel-name[Lohnentwicklung]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.deutschlandfunk.de/nordrhein-westfalen-will-tarifabschluss-uebernehmen-100.html',height='480px')
+```
+]
+.panel[.panel-name[(De-)Globalisierung]
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_url('https://www.deutschlandfunkkultur.de/deglobalisierung-100.html',height='480px')
+```
+]
+.panel[.panel-name[Demografie]
+```{r, echo=FALSE,fig.align='center',out.height='480px'}
+knitr::include_graphics('../images/bevoelkerung-altersstruktur.png')
+```
+]
 ]
 
 
 
+---
+name: Prod
+class: left
+
+# Produktivität als Lösung
+
+.panelset[
+.panel[.panel-name[Benzin]
+```{r, echo=FALSE,fig.align='center',out.height='480px'}
+knitr::include_graphics('https://www.iwkoeln.de/fileadmin/user_upload/Presse/IW-Nachrichten/Inflation_1.png')
+```
+]
+.panel[.panel-name[Strom]
+```{r, echo=FALSE,fig.align='center',out.height='480px'}
+knitr::include_graphics('https://www.iwkoeln.de/fileadmin/user_upload/Presse/IW-Nachrichten/Inflation_2.png')
+```
+]
+]
+
+.quelle[Quelle: [IW Köln](https://www.iwkoeln.de/presse/iw-nachrichten/michael-huether-christoph-schroeder-fuenf-minuten-arbeit-fuer-einen-liter-benzin.html).
+]
 
 
-
-
-
+---
+name: Fazit
+class: left
 
 # Fazit
 
+.pull-left[
+.blockquote[
+"Investing in yourself is the best thing you can do. Anything that improves your own talents."
+]
+.tr[
+— (Warren Buffet, Investor)
+]
+]
+.pull-right[
+```{r, echo=FALSE,out.height = "230px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Warren_Buffett_KU_Visit.jpg/800px-Warren_Buffett_KU_Visit.jpg")
+```
+]
 
+.pull-left[
+```{r, echo=FALSE,out.height = "230px"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/4/48/Stephen_J._Dubner_by_Audrey_S._Bernstein_wiki.jpg")
+```
+]
 
+.pull-right[
+.blockquote[
+"Take care of yourself, and if you can, someone else, too."
+]
+.tr[
+— (Stephen Dubner, [Freakonomics Podcast](https://freakonomics.com/))
+]
+]
 
 ???
 
+* Inflation ist komplex
 
-* weitere wichtige Nachfragekomponenten
- * Staat (unabhängig vom Vertrauen ins Geschäftsklima)
- * Ausland
+* Inflation wirkt umverteilend
 
-* Corona-Rezession
-* Staatliche Reaktion
-  * Fiskalpolitik (Kurzarbeitergeld, Hilfszahlungen, Konsumgutscheine in den USA...)
-  * Geldpolitik
+* Inflationsbekämpfung durch Geld- und Fiskalpolitik
+
+    * Geldpolitik primär für Geldwert verantwortlich
+
+    * Fiskalpolitik muss...
+        * ...Verteilungswirkungen erträglich halten...
+        * ...aber vor allem wichtige Investitionen tätigen 
+        
+    *
+
 
 
 ---
