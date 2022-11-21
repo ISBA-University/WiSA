@@ -175,7 +175,7 @@ Eine über einen längeren Zeitraum anhaltende Zunahme des Preisniveaus bzw. sin
       * Preis als objektiver Tauschwert eines Gutes in Marktwirtschaften.
       * Preisniveau als durschnittlicher Preis aller (produzierten) Güter.
 
-* Inflation vs. Disinflation vs. [Deflation vs. Stagflation](#Deflation)
+* Inflation vs. Disinflation vs. [Deflation](#Deflation) vs. Stagflation
 
 
 .blockquote[
@@ -201,7 +201,7 @@ werden kann (**Geldwert**).
 name: Preiskaleidoskop
 class: left
 
-# Verbraucherpreisindex
+# VPI-Warenkorb (Verbraucherpreisindex)
 
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
 knitr::include_url('https://service.destatis.de/Voronoi/PreisKaleidoskop.svg',height='550px')
@@ -249,7 +249,7 @@ knitr::include_url('https://www.dashboard-deutschland.de/',height='480px')
 ```
 .quellePanURL[Quelle:[Statistisches Bundesamt](https://www.dashboard-deutschland.de).]
 ]
-.panel[.panel-name[Inflationsmessung]
+.panel[.panel-name[Inflationsrate]
 * Ein Preisindex misst das Preisniveau (Durchschnittliche Güterpreise)
 * Die Inflation(srate) gibt Auskunft über die Preissteigerungen
 $$\pi_t=\frac{P_t-P_{t-1}}{P_{t-1}}=\frac{P_t}{P_{t-1}}-1$$
@@ -261,10 +261,6 @@ $$\pi_t=\frac{P_t-P_{t-1}}{P_{t-1}}=\frac{P_t}{P_{t-1}}-1$$
 $$\pi_{Okt22}=\frac{122,2-110,7}{110,7}\approx 0,10388 \Rightarrow 10,39\%$$ 
 ]
 .panel[.panel-name[Indikatoren]
-* Aggregierte Betrachtung: [BIP-Deflator bzw. Preisindex des BIP](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-lange-reihen-pdf-2180150.pdf?__blob=publicationFile)
-(Konsum- und Investitionsgüter/Vorprodukte)
-   
-
 * [Disaggregierte Betrachtung](https://www.dashboard-deutschland.de/indicator/data_preisentwicklung?mtm_campaign=dd-social-sharing)
 
     * Produktion: Erzeugerpreise
@@ -274,6 +270,11 @@ $$\pi_{Okt22}=\frac{122,2-110,7}{110,7}\approx 0,10388 \Rightarrow 10,39\%$$
     * Großhandel: Großhandelspreise (Einkaufspreise)
     
     * Konsum: Verbraucherpreise (VPI/HVPI)
+  
+
+* Aggregierte Betrachtung: [BIP-Deflator bzw. Preisindex des BIP](https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/Publikationen/Downloads-Inlandsprodukt/inlandsprodukt-lange-reihen-pdf-2180150.pdf?__blob=publicationFile)
+(Konsum- und Investitionsgüter/Vorprodukte)
+
 ]
 .panel[.panel-name[Indikatorenvergleich]
 ```{r, echo=FALSE,fig.align='center',out.width='100%'}
@@ -419,7 +420,7 @@ class: left
 # Eine (unvollständige) Analyse
 
 .panelset[
-.panel[.panel-name[USA]
+.panel[.panel-name[Nachholeffekt]
 ```{r, echo=FALSE,fig.align='center',out.height='470px'}
 knitr::include_graphics('../images/Corona_Cash_USA_(Economist_20210309).png')
 ```
@@ -442,12 +443,25 @@ knitr::include_graphics('../images/Inflationswirkung_CO2-Preis_(SVR_2020_S10).pn
 ]
 ]
 
+
+
+---
+name: Gewinninflation
+class: left
+
+# Also eine Kosteninflation?
+
+```{r, echo=FALSE,fig.align='center',out.width='100%'}
+knitr::include_url('https://www.cbsnews.com/news/stock-up-rally-solid-profits-2022-18-10/',height = '550px')
+```
+
 ???
 
-* Erzeugerpreise D:
-   * September 2022: 172,5
-   * September 2021: 118,3
-   * Steigerung: 45,8%
+* Zu den Gewinnern zählen v.a. Unternehmen mit Preissetzungsmacht, bspw. Ölkonzerne
+
+* Aber auch Verlierer 
+[Insolvenz Comfort](https://www.immobilienmanager.de/comfort-stellt-insolvenzantrag-08092022)
+
 
 
 ---
@@ -467,7 +481,14 @@ knitr::include_url('https://www.dashboard-deutschland.de/',height='480px')
 ]
 ]
 
+???
 
+* Erzeugerpreise D:
+   * September 2022: 172,5
+   * September 2021: 118,3
+   * Steigerung: 45,8%
+   
+   
 ---
 name: Lohn
 class: left
@@ -498,7 +519,7 @@ knitr::include_graphics('../images/bevoelkerung-altersstruktur.png')
 name: Prod
 class: left
 
-# Produktivität als Lösung
+# Produktivitätssteigerungen für langfristigen Wohlstand
 
 .panelset[
 .panel[.panel-name[Benzin]
