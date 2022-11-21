@@ -513,6 +513,12 @@ knitr::include_graphics('../images/bevoelkerung-altersstruktur.png')
 ]
 ]
 
+???
+
+* Globalisierung ist eine Wohlstandsmaschine
+* Politiker anfällig für "einfache Lösungen"
+* Protektionismus klingt einfach und gut, wird aber langfristig dramatische Folgen für den Wohlstand haben
+* Gerade in einer alternden Gesellschaft brauchen wir unbedingt das Ausland
 
 
 ---
